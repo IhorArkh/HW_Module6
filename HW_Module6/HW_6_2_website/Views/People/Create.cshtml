@@ -1,0 +1,26 @@
+﻿@model Human
+@{
+    ViewData["Title"] = "Create Human";
+}
+
+
+<div>
+    <form method="post">
+        <div class="mb-3">
+            <label for="Passport" class="form-label">Passport</label>
+            <input type="text" class="form-control" id="passport" name="passport" />
+        </div>
+        <div class="mb-3">
+            <label for="Name" class="form-label">Name</label>
+            <input type="text" class="form-control" id="name" name="name" />
+        </div>
+        <div class="mb-3">
+            <label for="Age" class="form-label">Age</label>
+            <input type="text" class="form-control" id="age" name="age" />
+        </div>
+        <div class="mb-3">
+            <button class="btn btn-success btn-lg" type="submit">Create</button>
+            <a class="btn btn-danger" href="Index" role="button">Go back</a>
+        </div>
+    </form>
+</div>
