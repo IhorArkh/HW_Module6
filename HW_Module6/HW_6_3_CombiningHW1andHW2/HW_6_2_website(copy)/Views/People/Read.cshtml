@@ -1,0 +1,13 @@
+﻿@model Human
+@{
+    ViewData["Title"] = "Read Human";
+}
+
+
+<div id="centredDiv">
+    <h1>Info about this human:</h1>
+    <p><b>Passport: </b>@Model.Passport</p>
+    <p><b>Name: </b>@Model.Name</p>
+    <p><b>Age: </b>@Model.Age</p>
+    <a class="btn btn-danger" href="Index" role="button">Go back</a> @*@Html.ActionLink("Go back", "Index")*@
+</div>
