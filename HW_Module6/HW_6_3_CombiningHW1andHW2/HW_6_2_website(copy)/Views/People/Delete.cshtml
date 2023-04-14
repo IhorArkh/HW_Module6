@@ -1,0 +1,13 @@
+﻿@model Human
+@{
+    ViewData["Title"] = "Delete Human";
+}
+
+
+<div id="centredDiv">
+    <h3>Are you sure?</h3>
+    <form asp-action="Delete2" asp-route-passport="@Model.Passport" method="post">
+        <input class="btn btn-success" type="submit" value="Yes, delete!" />
+        <a class="btn btn-danger" href="Index" role="button">Go back</a>
+    </form>
+</div>

@@ -1,0 +1,34 @@
+﻿@model List<Human>
+@{
+    ViewData["Title"] = "People repository";
+}
+
+
+<div class="text-center">
+    <h1>People repository</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Passport</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th colspan="3">Actions</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var human in Model)
+            {
+                <tr>
+                    <td>@human.Passport</td>
+                    <td>@human.Name</td>
+                    <td>@human.Age</td>
+                    <td>@Html.ActionLink("Update", "Update", new { passport = human.Passport})</td>
+                    <td>@Html.ActionLink("Delete", "Delete", new { passport = human.Passport})</td>
+                    <td>@Html.ActionLink("Read", "Read", new { passport = human.Passport})</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    @Html.ActionLink("Create new human", "Create")
+</div>
